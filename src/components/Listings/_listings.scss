@@ -1,0 +1,139 @@
+.ListingsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 8rem;
+  .tabs {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    .tab {
+      padding: 1rem 3rem;
+      border-top: 1px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      border-radius: 10px 10px 0 0;
+      transition: all 0.2s ease-in-out;
+      background: rgb(228, 228, 228);
+      box-shadow: 0 -1px 5px rgb(70, 70, 70);
+      font-size: 1.25rem;
+      &:hover {
+        background: rgb(203, 203, 203);
+      }
+    }
+  }
+  .active-listings {
+    width: 70%;
+    border-top: 3px solid rgb(130, 130, 130);
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    .listing {
+      display: flex;
+      gap: 1rem;
+
+      .listing-img {
+        width: 50vw;
+        height: min-content;
+        overflow: hidden;
+        position: relative;
+        .listing-status {
+          position: absolute;
+          top: 40px;
+          left: -50px;
+          background: rgb(222, 222, 222);
+          padding: 0.5rem;
+          width: 200px;
+          text-align: center;
+          text-transform: uppercase;
+          color: rgb(89, 89, 89);
+          transform: rotate(-45deg);
+        }
+        img {
+          width: inherit;
+          object-fit: cover;
+        }
+      }
+      .listing-info {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+        width: 35%;
+        h1 {
+          padding: 1rem 0;
+          color: rgb(65, 65, 65);
+          letter-spacing: 5px;
+        }
+        h2 {
+          color: rgb(65, 65, 65);
+          margin-bottom: 1rem;
+        }
+        .listing-specs {
+          border-top: 1px solid grey;
+          border-bottom: 1px solid grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          gap: 1rem;
+          div {
+            flex: 1;
+            &:not(:last-child) {
+              border-right: 2px solid grey;
+            }
+            p:first-child {
+              font-size: 1.5rem;
+              margin-bottom: 0.5rem;
+            }
+            p:last-child {
+              color: grey;
+            }
+          }
+        }
+        .price {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 1rem;
+          p {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+          }
+          .details {
+            border: 1px solid grey;
+            padding: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              background: rgb(206, 206, 206);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .tabs {
+      .tab {
+        padding: 1rem 1.5rem;
+      }
+    }
+    .active-listings {
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      .listing {
+        flex-direction: column;
+        .listing-img {
+          width: 75vw;
+        }
+        .listing-info {
+          margin: auto;
+          width: 65%;
+        }
+      }
+    }
+  }
+}
