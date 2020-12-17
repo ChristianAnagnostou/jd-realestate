@@ -9,7 +9,7 @@ export default function ListingsData() {
       baths: 3.5,
       sq_ft_lot: 63162,
       price: 12775000,
-      img:
+      imgSrc:
         "https://judycitron.com/wp-content/uploads/2020/08/42-Camino-Blu-Skye-Media-2149-X3-1200x703.jpg",
     },
     {
@@ -21,7 +21,7 @@ export default function ListingsData() {
       baths: 5.5,
       sq_ft_lot: 43382,
       price: 11250000,
-      img:
+      imgSrc:
         "https://judycitron.com/wp-content/uploads/2020/02/119-Selby-Ln-Atherton-CA-94027-print-001-036-Twilight-Front-Exterior-4200x2800-300dpi-web.jpg",
     },
     {
@@ -33,7 +33,7 @@ export default function ListingsData() {
       baths: 3,
       sq_ft_lot: 11780,
       price: 6750000,
-      img: "https://judycitron.com/wp-content/uploads/2020/07/1-1.jpg",
+      imgSrc: "https://judycitron.com/wp-content/uploads/2020/07/1-1.jpg",
     },
     {
       status: "active",
@@ -44,7 +44,7 @@ export default function ListingsData() {
       baths: 2,
       sq_ft_lot: 15750,
       price: 4150000,
-      img: "https://judycitron.com/wp-content/uploads/2020/02/1-front-1200x800.jpg",
+      imgSrc: "https://judycitron.com/wp-content/uploads/2020/02/1-front-1200x800.jpg",
     },
     {
       status: "active",
@@ -55,7 +55,7 @@ export default function ListingsData() {
       baths: 3.5,
       sq_ft_lot: 63162,
       price: 12775000,
-      img: "https://judycitron.com/wp-content/uploads/2020/02/DSC9227.jpg",
+      imgSrc: "https://judycitron.com/wp-content/uploads/2020/02/DSC9227.jpg",
     },
     {
       status: "active",
@@ -66,7 +66,7 @@ export default function ListingsData() {
       baths: 5.5,
       sq_ft_lot: 43382,
       price: 11250000,
-      img:
+      imgSrc:
         "https://judycitron.com/wp-content/uploads/2020/07/325-Arden-Blu-Skye-Media-5131-Edit.jpg",
     },
     {
@@ -78,7 +78,7 @@ export default function ListingsData() {
       baths: 3,
       sq_ft_lot: 11780,
       price: 6750000,
-      img: "https://judycitron.com/wp-content/uploads/2020/09/1.jpg",
+      imgSrc: "https://judycitron.com/wp-content/uploads/2020/09/1.jpg",
     },
     {
       status: "sold",
@@ -89,7 +89,7 @@ export default function ListingsData() {
       baths: 5.5,
       sq_ft_lot: 43382,
       price: 11250000,
-      img:
+      imgSrc:
         "https://judycitron.com/wp-content/uploads/2020/02/119-Selby-Ln-Atherton-CA-94027-print-001-036-Twilight-Front-Exterior-4200x2800-300dpi-web.jpg",
     },
     {
@@ -101,7 +101,7 @@ export default function ListingsData() {
       baths: 3,
       sq_ft_lot: 11780,
       price: 6750000,
-      img: "https://judycitron.com/wp-content/uploads/2020/07/1-1.jpg",
+      imgSrc: "https://judycitron.com/wp-content/uploads/2020/07/1-1.jpg",
     },
   ];
 }

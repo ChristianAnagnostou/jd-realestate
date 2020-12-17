@@ -2,9 +2,9 @@ import React from "react";
 
 import profileImage from "../../img/profile-image.jpeg";
 
-function CardTwo() {
+function CardTwo({ cardTwoRef }) {
   return (
-    <div className="card two">
+    <div className="card two" ref={cardTwoRef}>
       <img src={profileImage} alt="" />
       <div className="description">
         <h3>John Anagnostou</h3>

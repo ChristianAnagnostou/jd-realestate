@@ -1,6 +1,6 @@
 import React from "react";
 
-function CardOne() {
+function CardOne({ scrollBtnClick }) {
   return (
     <div className="card one">
       <h1>
@@ -9,7 +9,9 @@ function CardOne() {
       </h1>
       <h3>Find the One</h3>
       <h3>Built for You</h3>
-      <div className="arrow">V</div>
+      <div className="arrow" onClick={scrollBtnClick}>
+        V
+      </div>
     </div>
   );
 }

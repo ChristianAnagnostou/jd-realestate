@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+// Util
 import ListingData from "./ListingsData";
+import ScrollTop from "../ScrollTop";
 
 function Listings() {
   const [filteredData, setFilteredData] = useState(ListingData());
@@ -14,6 +16,7 @@ function Listings() {
 
   return (
     <div className="ListingsPage">
+      <ScrollTop />
       <h1>LISTINGS</h1>
       <div className="tabs">
         <div className="tab" onClick={() => setFilteredData(ListingData())}>
@@ -34,8 +37,8 @@ function Listings() {
           return (
             <div className="listing">
               <div className="listing-img">
-                <p className="listing-status">{listing.status}</p>
-                <img src={listing.img} alt={listing.address} />
+                <p className="listing-status-banner">{listing.status}</p>
+                <img src={listing.imgSrc} alt={listing.address} />
               </div>
               <div className="listing-info">
                 <h1>{listing.location}</h1>

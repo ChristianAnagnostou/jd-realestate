@@ -1,15 +1,10 @@
 import React from "react";
+import ImageSlider from "./ImageSlider";
 
 function CardThree() {
   return (
     <div className="card three">
-      <div className="image-slider">
-        <div>
-          <h1>{"<"}</h1>
-          <h1>Image Slider Here</h1>
-          <h1>{">"}</h1>
-        </div>
-      </div>
+      <ImageSlider />
     </div>
   );
 }
