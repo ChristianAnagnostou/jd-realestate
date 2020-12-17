@@ -14,6 +14,10 @@ function Listings() {
     );
   };
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   return (
     <div className="ListingsPage">
       <ScrollTop />
@@ -53,12 +57,12 @@ function Listings() {
                     <p>BATHS</p>
                   </div>
                   <div>
-                    <p>{listing.sq_ft_lot}</p>
+                    <p>{numberWithCommas(listing.sq_ft_lot)}</p>
                     <p>SQ FT LOT</p>
                   </div>
                 </div>
                 <div className="price">
-                  <p>{listing.price}</p>
+                  <p>${numberWithCommas(listing.price)}</p>
                   <div className="details">DETAILS</div>
                 </div>
               </div>

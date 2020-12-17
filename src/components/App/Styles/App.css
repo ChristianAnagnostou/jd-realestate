@@ -725,39 +725,6 @@
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-}
-
-*::-webkit-scrollbar {
-  width: 5px;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(92, 92, 92, 0.5);
-  border-radius: 20px;
-  border: transparent;
-}
-
-.App {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-body {
-  background: #eaeaea;
-}
-
 nav {
   z-index: 1;
   position: fixed;
@@ -817,5 +784,38 @@ nav a:hover {
     margin: 1.5rem 0.5rem;
     cursor: pointer;
   }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 92, 92, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.App {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: #eaeaea;
 }
 /*# sourceMappingURL=App.css.map */

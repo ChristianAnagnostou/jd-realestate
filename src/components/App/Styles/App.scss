@@ -3,6 +3,7 @@
 @import "../../MeetJD/meetjd";
 @import "../../GetInTouch/getInTouch";
 @import "../../Home/home";
+@import "../../NavBar/navbar";
 
 * {
   box-sizing: border-box;
@@ -30,48 +31,4 @@
 
 body {
   background: #eaeaea;
-}
-
-nav {
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(174, 174, 174);
-  border-bottom: 2px solid black;
-  h1 {
-    margin-left: 10%;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    margin-right: 10%;
-    li {
-      margin: 1.5rem;
-      cursor: pointer;
-    }
-  }
-  a {
-    text-decoration: white;
-    color: black;
-    &:hover {
-      color: white;
-    }
-  }
-  @media (max-width: 1200px) {
-    h1 {
-      margin-left: 5%;
-    }
-    ul {
-      display: flex;
-      list-style: none;
-      margin-right: 2%;
-      li {
-        margin: 1.5rem 0.5rem;
-        cursor: pointer;
-      }
-    }
-  }
 }
