@@ -29,17 +29,17 @@
   border-top: 1px solid grey;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #e4e4e4;
+  background: #8ba6eb;
   -webkit-box-shadow: 0 -1px 5px #464646;
           box-shadow: 0 -1px 5px #464646;
   font-size: 1.25rem;
 }
 
 .ListingsPage .tabs .tab:hover {
-  background: #cbcbcb;
+  background: #bccafa;
 }
 
 .ListingsPage .active-listings {
@@ -71,6 +71,8 @@
   height: min-content;
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 0px 0px 20px #686868;
+          box-shadow: 0px 0px 20px #686868;
 }
 
 .ListingsPage .active-listings .listing .listing-img .listing-status-banner {
@@ -85,10 +87,13 @@
   color: #595959;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  border-bottom: 5px solid #555555;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 4px solid #858585;
+  letter-spacing: 1px;
 }
 
 .ListingsPage .active-listings .listing .listing-img img {
+  margin-bottom: -5px;
   width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
@@ -98,6 +103,16 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ListingsPage .active-listings .listing .listing-info h1 {
@@ -112,14 +127,12 @@
 }
 
 .ListingsPage .active-listings .listing .listing-info .listing-specs {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -135,6 +148,7 @@
 
 .ListingsPage .active-listings .listing .listing-info .listing-specs div:not(:last-child) {
   border-right: 2px solid grey;
+  padding-right: 1rem;
 }
 
 .ListingsPage .active-listings .listing .listing-info .listing-specs div p:first-child {
@@ -150,8 +164,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -164,14 +179,73 @@
 }
 
 .ListingsPage .active-listings .listing .listing-info .price .details {
+  background: #8ba6eb;
+  color: #2b2b2b;
   border: 1px solid grey;
   padding: 0.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  position: relative;
 }
 
 .ListingsPage .active-listings .listing .listing-info .price .details:hover {
-  background: #cecece;
+  background: #bccafa;
+  -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px);
+}
+
+.ListingsPage .active-listings .listing .listing-info .price .details:hover::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-animation: shadow 200ms forwards;
+          animation: shadow 200ms forwards;
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+}
+
+.ListingsPage .active-listings .listing .listing-info .price .details:hover::after {
+  content: "DETAILS";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 1000px) {
@@ -179,7 +253,7 @@
     padding: 1rem 1.5rem;
   }
   .ListingsPage .active-listings {
-    width: 90%;
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -212,7 +286,69 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
+  padding-top: 5%;
+}
+
+.CommunityPage .map-container {
+  width: 900px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  position: relative;
+}
+
+.CommunityPage .map-container img {
+  margin-bottom: -5px;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.CommunityPage .map-container map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: inherit;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.CommunityPage .map-container map #millbrae:hover:after {
+  content: "Millbrae average price: $1,300,000";
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.CommunityPage .map-container map #burlingame:hover:after {
+  content: "Burlingame average price: $1,550,000";
+  position: absolute;
+  top: 11%;
+  left: 14%;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .CommunityPage .map-container {
+    width: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .CommunityPage .map-container {
+    width: 450px;
+  }
 }
 
 .MeetJD {
@@ -786,7 +922,9 @@ nav a:hover {
   }
 }
 
-* {
+*,
+::before,
+::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
@@ -794,15 +932,21 @@ nav a:hover {
   scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
+*::-webkit-scrollbar,
+::before::-webkit-scrollbar,
+::after::-webkit-scrollbar {
   width: 5px;
 }
 
-*::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track,
+::before::-webkit-scrollbar-track,
+::after::-webkit-scrollbar-track {
   background: transparent;
 }
 
-*::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb,
+::before::-webkit-scrollbar-thumb,
+::after::-webkit-scrollbar-thumb {
   background-color: rgba(92, 92, 92, 0.5);
   border-radius: 20px;
   border: transparent;

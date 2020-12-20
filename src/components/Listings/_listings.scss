@@ -14,13 +14,13 @@
       border-top: 1px solid grey;
       border-left: 1px solid grey;
       border-right: 1px solid grey;
-      border-radius: 10px 10px 0 0;
+      border-radius: 5px 5px 0 0;
       transition: all 0.2s ease-in-out;
-      background: rgb(228, 228, 228);
+      background: rgb(139, 166, 235);
       box-shadow: 0 -1px 5px rgb(70, 70, 70);
       font-size: 1.25rem;
       &:hover {
-        background: rgb(203, 203, 203);
+        background: rgb(188, 202, 250);
       }
     }
   }
@@ -41,6 +41,7 @@
         height: min-content;
         overflow: hidden;
         position: relative;
+        box-shadow: 0px 0px 20px rgb(104, 104, 104);
         .listing-status-banner {
           position: absolute;
           top: 40px;
@@ -52,9 +53,12 @@
           text-transform: uppercase;
           color: rgb(89, 89, 89);
           transform: rotate(-45deg);
-          border-bottom: 5px solid rgb(85, 85, 85);
+          border-top: 1px solid rgb(140, 140, 140);
+          border-bottom: 4px solid rgb(133, 133, 133);
+          letter-spacing: 1px;
         }
         img {
+          margin-bottom: -5px;
           width: inherit;
           object-fit: cover;
         }
@@ -63,6 +67,9 @@
         font-family: Georgia, "Times New Roman", Times, serif;
         text-align: center;
         width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h1 {
           padding: 1rem 0;
           color: rgb(65, 65, 65);
@@ -73,10 +80,8 @@
           margin-bottom: 1rem;
         }
         .listing-specs {
-          border-top: 1px solid grey;
-          border-bottom: 1px solid grey;
           display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
           padding: 1rem;
           gap: 1rem;
@@ -84,6 +89,7 @@
             flex: 1;
             &:not(:last-child) {
               border-right: 2px solid grey;
+              padding-right: 1rem;
             }
             p:first-child {
               font-size: 1.5rem;
@@ -96,7 +102,7 @@
         }
         .price {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-evenly;
           align-items: center;
           margin-top: 1rem;
           p {
@@ -104,11 +110,46 @@
             letter-spacing: 2px;
           }
           .details {
+            background: rgb(139, 166, 235);
+            color: rgb(43, 43, 43);
             border: 1px solid grey;
             padding: 0.5rem;
-            transition: all 0.2s ease-in-out;
+            transition: all 200ms ease-in-out;
+            position: relative;
             &:hover {
-              background: rgb(206, 206, 206);
+              background: rgb(188, 202, 250);
+              transform: translate(2px, -2px);
+              &::before {
+                content: "";
+                height: 100%;
+                width: 100%;
+                background: grey;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                animation: shadow 200ms forwards;
+                @keyframes shadow {
+                  0% {
+                    transform: translate(0px, 0px);
+                  }
+                  100% {
+                    transform: translate(-5px, 5px);
+                  }
+                }
+              }
+              &::after {
+                content: "DETAILS";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                background: inherit;
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
             }
           }
         }
@@ -122,7 +163,7 @@
       }
     }
     .active-listings {
-      width: 90%;
+      width: 100%;
       justify-content: center;
       align-items: center;
       .listing {
