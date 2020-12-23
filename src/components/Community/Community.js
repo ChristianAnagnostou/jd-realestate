@@ -23,11 +23,11 @@ function Community() {
           />
         </map>
       </div>
-      <div className="community-list">
+      {/* <div className="community-list">
         {communities.map((town) => (
           <div key={town}>{town}</div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

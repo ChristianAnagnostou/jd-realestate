@@ -8,6 +8,7 @@ import ScrollTop from "../ScrollTop";
 
 function Home() {
   const cardTwo = useRef(null);
+
   const scrollBtnClick = () => {
     cardTwo.current.scrollIntoView();
   };

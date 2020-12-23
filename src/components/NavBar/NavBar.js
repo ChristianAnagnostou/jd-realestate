@@ -8,6 +8,10 @@ function NavBar() {
       <h1>
         <NavLink to="/">JD Anagnostou</NavLink>
       </h1>
+      {/* <form action="GET">
+        <input type="text" name="navSearch" className="navSearch" placeholder="search"/>
+        <button type="submit">Search</button>
+      </form> */}
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>

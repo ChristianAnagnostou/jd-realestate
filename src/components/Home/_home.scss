@@ -6,6 +6,49 @@
   }
 }
 
+#title-J {
+  position: absolute;
+  left: -70vw;
+  opacity: 0;
+  animation: animate-J 2s ease-in -0.25s 1 forwards;
+}
+@keyframes animate-J {
+  90% {
+    left: 0;
+    transform: rotateZ(20deg);
+  }
+  95% {
+    left: 0;
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    left: 0;
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+}
+#title-D {
+  position: absolute;
+  right: -70vw;
+  opacity: 0;
+  animation: animate-D 2s ease-in -0.25s 1 forwards;
+}
+@keyframes animate-D {
+  90% {
+    right: 0;
+    transform: rotateZ(-20deg);
+  }
+  95% {
+    right: 0;
+    transform: rotateZ(20deg);
+  }
+  100% {
+    right: 0;
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+}
+
 .one {
   display: flex;
   justify-content: center;
@@ -13,6 +56,9 @@
   flex-direction: column;
   position: relative;
   h1 {
+    height: 10rem;
+    width: 12rem;
+    position: relative;
     span {
       font-size: 10rem;
     }
@@ -21,6 +67,16 @@
     margin-top: 10px;
     color: grey;
     letter-spacing: 3px;
+    animation: fade 0.75s ease 1.75s 1 forwards;
+    opacity: 0%;
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100%;
+      }
+    }
   }
   .arrow {
     position: absolute;
