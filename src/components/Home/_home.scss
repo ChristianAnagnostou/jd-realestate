@@ -10,7 +10,7 @@
   position: absolute;
   left: -70vw;
   opacity: 0;
-  animation: animate-J 2s ease-in -0.25s 1 forwards;
+  animation: animate-J 1.5s ease-in -0.25s 1 forwards;
 }
 @keyframes animate-J {
   90% {
@@ -22,7 +22,7 @@
     transform: rotateZ(-20deg);
   }
   100% {
-    left: 0;
+    left: 23px;
     transform: rotateZ(0deg);
     opacity: 1;
   }
@@ -31,7 +31,7 @@
   position: absolute;
   right: -70vw;
   opacity: 0;
-  animation: animate-D 2s ease-in -0.25s 1 forwards;
+  animation: animate-D 1.5s ease-in -0.25s 1 forwards;
 }
 @keyframes animate-D {
   90% {
@@ -43,7 +43,7 @@
     transform: rotateZ(20deg);
   }
   100% {
-    right: 0;
+    right: 23px;
     transform: rotateZ(0deg);
     opacity: 1;
   }

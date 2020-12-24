@@ -494,8 +494,8 @@
   position: absolute;
   left: -70vw;
   opacity: 0;
-  -webkit-animation: animate-J 2s ease-in -0.25s 1 forwards;
-          animation: animate-J 2s ease-in -0.25s 1 forwards;
+  -webkit-animation: animate-J 1.5s ease-in -0.25s 1 forwards;
+          animation: animate-J 1.5s ease-in -0.25s 1 forwards;
 }
 
 @-webkit-keyframes animate-J {
@@ -510,7 +510,7 @@
             transform: rotateZ(-20deg);
   }
   100% {
-    left: 0;
+    left: 23px;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
     opacity: 1;
@@ -529,7 +529,7 @@
             transform: rotateZ(-20deg);
   }
   100% {
-    left: 0;
+    left: 23px;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
     opacity: 1;
@@ -540,8 +540,8 @@
   position: absolute;
   right: -70vw;
   opacity: 0;
-  -webkit-animation: animate-D 2s ease-in -0.25s 1 forwards;
-          animation: animate-D 2s ease-in -0.25s 1 forwards;
+  -webkit-animation: animate-D 1.5s ease-in -0.25s 1 forwards;
+          animation: animate-D 1.5s ease-in -0.25s 1 forwards;
 }
 
 @-webkit-keyframes animate-D {
@@ -556,7 +556,7 @@
             transform: rotateZ(20deg);
   }
   100% {
-    right: 0;
+    right: 23px;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
     opacity: 1;
@@ -575,7 +575,7 @@
             transform: rotateZ(20deg);
   }
   100% {
-    right: 0;
+    right: 23px;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
     opacity: 1;

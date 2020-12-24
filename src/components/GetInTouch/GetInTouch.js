@@ -35,7 +35,7 @@ function GetInTouch() {
         <h1>Contact Me</h1>
         <p>
           I'm happy to answer any questions you have or provide you with an estimate. Just send me a
-          message in the form below with any questions.
+          message in the form below.
         </p>
         <form id="contact-form" onSubmit={handleSubmit} method="POST">
           <div className="form-group">
@@ -86,11 +86,11 @@ function GetInTouch() {
           </button>
         </form>
       </div>
-      <div className="info">
+      {/* <div className="info">
         <p>My info</p>
         <p>650.704.5134</p>
         <p>jdsoldit@pacbell.net</p>
-      </div>
+      </div> */}
     </div>
   );
 }
