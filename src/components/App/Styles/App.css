@@ -582,6 +582,46 @@
   }
 }
 
+svg {
+  position: absolute;
+  top: 250px;
+  margin: auto;
+}
+
+svg #circleSVG {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 4000;
+  fill: transparent;
+  -webkit-animation: draw 2s 1.2s forwards;
+  animation: draw 2s 1.2s forwards;
+}
+
+@-webkit-keyframes draw {
+  from {
+    fill: transparent;
+    stroke: black;
+    stroke-dashoffset: 2000;
+  }
+  to {
+    fill: transparent;
+    stroke: black;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    fill: transparent;
+    stroke: black;
+    stroke-dashoffset: 2000;
+  }
+  to {
+    fill: transparent;
+    stroke: black;
+    stroke-dashoffset: 0;
+  }
+}
+
 .one {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,6 +1024,7 @@ nav {
   z-index: 1;
   position: fixed;
   width: 100%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,10 +1036,15 @@ nav {
           align-items: center;
   background: #aeaeae;
   border-bottom: 2px solid black;
+  top: -60px;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 nav h1 {
   margin-left: 10%;
+  font-size: 3rem;
 }
 
 nav ul {

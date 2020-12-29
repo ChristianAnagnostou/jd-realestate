@@ -7,12 +7,11 @@ function CardTwo({ cardTwoRef }) {
     <div className="card two" ref={cardTwoRef}>
       <img src={profileImage} alt="" />
       <div className="description">
-        <h3>John Anagnostou</h3>
+        <h3>JD Anagnostou</h3>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, eaque. Assumenda
           molestiae accusamus voluptatem delectus consequuntur maiores odio ullam sit adipisci
-          accusantium nisi, aliquid perferendis minima totam dicta voluptate. Commodi, ea! At ullam
-          reiciendis perferendis error. Non, sapiente fugit!
+          accusantium nisi, aliquid perferendis minima totam dicta voluptate.
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ea dignissimos, enim

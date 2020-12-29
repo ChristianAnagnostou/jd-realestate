@@ -48,6 +48,30 @@
     opacity: 1;
   }
 }
+svg {
+  position: absolute;
+  top: 250px;
+  margin: auto;
+  #circleSVG {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 4000;
+    fill: transparent;
+    -webkit-animation: draw 2s 1.2s forwards;
+    animation: draw 2s 1.2s forwards;
+  }
+  @keyframes draw {
+    from {
+      fill: transparent;
+      stroke: black;
+      stroke-dashoffset: 2000;
+    }
+    to {
+      fill: transparent;
+      stroke: black;
+      stroke-dashoffset: 0;
+    }
+  }
+}
 
 .one {
   display: flex;
